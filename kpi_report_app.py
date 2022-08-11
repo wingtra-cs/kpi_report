@@ -120,7 +120,7 @@ if st.button('Generate Report'):
                 ax[3].barh(1,[close],color='#fc8ca0')
             ax[3].set_xticks(range(0,int(close+1),4))
             ax[3].set_yticks([])
-            ax[3].set_ylabel('Time to Clos', size=5)
+            ax[3].set_ylabel('Time to Close', size=5)
             ax[3].axvline(x=close_max, color='k', lw=0.8, ls='--')
             ax[3].text(close/30,0.7, 'Goal: <= 35 Days Time to Close (Crit 1-4)', ha='left', size=6)
             ax[3].text(close+close/30, 1, str(close), va='center', ha='right', rotation=270, size=7.5, fontweight='bold')
