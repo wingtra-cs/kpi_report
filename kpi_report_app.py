@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 import streamlit as st
 
 st.set_page_config(layout="wide")
+st.title('CS Team KPI Report')
+st.sidebar.image('./logo.png', width = 260)
 
 # Password Check
 
@@ -27,17 +29,16 @@ def check_password():
         st.text_input(
             "Password", type="password", on_change=password_entered, key="password"
         )
-        st.error("😕 Password incorrect")
+        st.error("Password Incorrect.")
         return False
     else:
         # Password correct.
         return True
 
 if check_password():
-    st.title('CS Team KPI Report')
-    st.sidebar.image('./logo.png', width = 260)
-    st.sidebar.markdown('#')
-    st.sidebar.write('Fill in the form using data from the corresponding Hubspot Dashboards.')
+    #st.sidebar.image('./logo.png', width = 260)
+    #st.sidebar.markdown('#')
+    #st.sidebar.write('Fill in the form using data from the corresponding Hubspot Dashboards.')
     st.sidebar.write('CES Score, Open and Overdue Tasks, Drones without Email: https://app.hubspot.com/reports-dashboard/3910549/view/3760416')
     st.sidebar.write('Time to Close, Time to First Reply: https://app.hubspot.com/reports-dashboard/3910549/view/9301395')
     
